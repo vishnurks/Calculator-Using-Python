@@ -4,7 +4,8 @@ root=Tk()
 root.title("Calculator")
 display=Entry(root)
 display.grid(row=1,columnspan=6,sticky=W+E)
-#get the user input into the textfield
+
+#get the user input into the textfield area
 
 i=0
 def get_variable(num):
@@ -40,6 +41,7 @@ def calculate():
     except Exception:
         clearall()
         display.insert(0,"error")
+
 #adding buttons
 
 Button(root,text="1",command=lambda :get_variable(1)).grid(row=2,column=0)
